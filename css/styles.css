@@ -49,3 +49,29 @@ body {
     -o-border-radius: 8px;
     background-color: rgb(255, 255, 255);
 }
+
+/* Works on Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: rgb(156, 156, 156) rgba(255, 166, 0, 0);
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 5px;
+}
+
+*::-webkit-scrollbar-track {
+    background: rgba(197, 197, 197, 0);
+}
+
+
+*::-webkit-scrollbar-thumb {
+    background-color:  rgb(156, 156, 156);
+    border-radius: 20px;
+}
+
+*::-webkit-scrollbar:horizontal {
+    height: 5px;
+    width: 5px;
+}
