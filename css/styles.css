@@ -1,0 +1,51 @@
+body {
+    background-color: rgb(255, 255, 255);
+}
+
+.text-color {
+    color: rgb(65, 65, 65);
+}
+
+.boton-style {
+    border-radius: 8px;
+    color: white;
+    border: 0px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    background-color: rgb(140, 173, 211);
+}
+
+.toast-success {
+    border-radius: 8px;
+    color: white;
+    border: 0px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    background-color: rgb(140, 173, 211);
+}
+
+.toast-error {
+    border-radius: 8px;
+    color: white;
+    border: 0px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    background-color: rgb(211, 140, 140);
+}
+
+.toast-neutral {
+    border-radius: 8px;
+    color: rgb(65, 65, 65);
+    border: 0px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    background-color: rgb(255, 255, 255);
+}

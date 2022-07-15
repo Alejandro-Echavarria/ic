@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Manuel Echavarria">
+    <title>Extraer cadena de caracteres</title>
+	<link rel="shortcut icon" type="image/x-icon" href="#">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="/librerias/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="container pt-5">
+        <h1 class="fw-bold my-3 text-color">Sustraer cadena de caracteres</h1>
+        <div class="my-5">
+            <form id="form">
+                <div class="mb-3">
+                    <label for="input-string" class="form-label fw-bold text-color">Escribe la cadena de caracteres</label>
+                    <textarea class="form-control" id="input-string" name="input-string" rows="8"></textarea>
+                  </div>
+            </form>
+            <button title="Extraer" type="submit" class="btn fw-bold rounded-5 boton-style" form="form"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/></svg> 
+             Enviar
+            </button>
+        </div>
+        <div>
+            <div class="d-flex">
+                <h3 class="fw-bold text-color me-3">Lista encontrada</h3>
+                <div>
+                    <button title="Limpiar campo y lista" onclick="fntLimpiar()" class="btn fw-bold rounded-5 toast-error"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
+                        <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/></svg>                     
+                    </button>
+                </div>
+            </div>
+            <div>
+                <ol id="list-space">
+
+                </ol>
+            </div>
+        </div>
+    </div>
+    <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+        <div class="toast hide" role="alert" aria-live="assertive" aria-atomic="true" data-bs-autohide="false">
+            <div class="toast-body d-flex justify-content-between">
+                <div class="fw-bold toast-text">
+                </div>
+                <div>
+                    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- scripts -->
+    <script src="/librerias/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/toast.js"></script>
+    <script src="/js/functions.js"></script>
+</body>
+</html>
