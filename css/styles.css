@@ -58,7 +58,7 @@ body {
 
 /* Works on Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
-    width: 5px;
+    width: 7px;
 }
 
 *::-webkit-scrollbar-track {
@@ -72,6 +72,6 @@ body {
 }
 
 *::-webkit-scrollbar:horizontal {
-    height: 5px;
-    width: 5px;
+    height: 7px;
+    width: 7px;
 }
