@@ -75,9 +75,11 @@ const tabla = [
 ];
 
 function identificarCitas(citas) {
-	let result = "";
 	let encontrado = 0;
 	let citasClasificadas = [];
+	let ordenAnterior = 0;
+	let categoriaAnterior = "";
+	let libroAnterior = "";
 
 	for (let cita of citas) {
 
@@ -95,17 +97,32 @@ function identificarCitas(citas) {
 				registro["categoria"] = tabla[i]["categoria"];
 				registro["libro"] = tabla[i]["libro"];
 				registro["cita"] = cita;
-				result = tabla[i]["categoria"]+" : "+tabla[i]["libro"]+" ->"+cita;
+
+				// Asegura los valores del registro procesado para refrencias futuras.
+				ordenAnterior = (tabla[i]["id_categoria"] *100)+tabla[i]["id_libro"];
+				categoriaAnterior = tabla[i]["categoria"];
+				libroAnterior = tabla[i]["libro"];
 				break;
 			}
 		}
 
 		if (encontrado != 1) {
-			registro["orden"] = 99999;
-			registro["categoria"] = "Sin Clasificacion";
-			registro["libro"] = "No Definido";
+			if (ordenAnterior === 0)  {
+				registro["orden"] = 99999;
+			} else  {
+				registro["orden"] = ordenAnterior;
+			}
+			if (categoriaAnterior === "")  {
+				registro["categoria"] = "Sin Clasificacion";
+			} else  {
+				registro["categoria"] = categoriaAnterior;
+			}
+			if (libroAnterior === "")  {
+				registro["libro"] = "No Definido";
+			} else  {
+				registro["libro"] = libroAnterior;
+			}
 			registro["cita"] = cita;	
-			result = "Sin Clasificacion  ->"+cita;
 		}
 		citasClasificadas.push(registro);
 	}	
